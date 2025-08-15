@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Chocolate+Classical+Sans&display=swap');
+
+/* 共用設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Chocolate Classical Sans", sans-serif;
+    text-decoration: none;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.flex-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.m-20px {
+    margin: 8px 0;
+}
+
+/* 水平排列 */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+/* 垂直排列 */
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.date-input {
+    text-align: left;
+
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+        cursor: pointer;
+        width: 19%;
+    }
+
+}
+
+.background {
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 440px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../img/bg.jpg");
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    padding: 0px 20%;
+    margin-bottom: 250px;
+    z-index: -1;
+    position: absolute;
+    top: 65px;
+}
+
+/* =====header starts===== */
+header {
+    background: #ffffff;
+    padding: 12px 24px;
+}
+
+.head {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo img {
+    height: 36px;
+    width: 125px;
+}
+
+/* =====hamburger hide===== */
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* ===== 桌面版選單 ===== */
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu>li {
+    position: relative;
+}
+
+.menu>li>a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+}
+
+.menu>li>a:hover {
+    color: #db5009;
+}
+
+.close-btn {
+    display: none;
+}
+
+/* =====子選單===== */
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    background-color: #f0f0f0;
+}
+
+.menu li:hover>.dropdown {
+    max-height: 500px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.mr8px {
+    margin-right: 8px;
+}
+
+.d-block {
+    display: none;
+}
+
+/* =====header===== */
+/* =====section starts===== */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 60px;
+    padding: 0 10px;
+}
+
+.banner {
+    margin-bottom: 10px;
+}
+
+.home-title {
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-top: 36px;
+    margin-right: 16px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* =====section ends===== */
+/* =====search box starts===== */
+.search-box {
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px 3%;
+    width: 100%;
+    box-shadow: 0 0 40px 1px rgba(201, 144, 144, 0.2);
+}
+
+/* =====選擇訂票方式===== */
+.main ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.onactive {
+    height: 50px;
+    width: 90px;
+    border-top-left-radius: 5px;
+    background-color: #ffffff;
+    padding: 12px;
+    padding-top: 14px;
+    list-style: none;
+}
+
+.offactive {
+    height: 50px;
+    width: 105px;
+    border-top-right-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 12px;
+    padding-top: 14px;
+    list-style: none;
+}
+
+.active {
+    color: #db5009;
+    font-weight: 500;
+}
+
+.anotherpage {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* =====選擇訂票方式===== */
+/* =====車程===== */
+
+.first-column {
+    width: 300px;
+}
+
+.text14px {
+    font-size: 14px;
+    color: #999;
+}
+
+
+.dropdown-first {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #333;
+    padding: 8px 28px 8px 0;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+}
+
+form {
+    width: auto;
+    position: relative;
+}
+
+.arrow {
+    width: 16px;
+    margin-right: 10px;
+    position: absolute;
+    right: 2px;
+    top: 14px;
+}
+
+option {
+    background-color: #ffffff;
+    color: #333;
+    outline: none;
+}
+
+option:hover {
+    background-color: #ddd;
+}
+
+option:checked {
+    background-color: #ccc;
+}
+
+.form-check {
+    margin-left: 16px;
+}
+
+.position {
+    position: relative;
+}
+
+.swich-icon {
+    width: 24px;
+    margin: 16px 8px 0px 8px;
+}
+
+/* =====車程===== */
+/* =====起訖選擇===== */
+
+.box-design-first {
+    border-radius: 5px;
+    border: rgb(214, 214, 214)solid 1px;
+    background-color: #ffffff;
+    height: 52px;
+    position: relative;
+    padding-left: 36px;
+    width: 45%;
+    margin: 4px 8px 8px 0;
+}
+
+.icon24px {
+    color: #db5009;
+    font-size: 24px;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.dropdown-second {
+    border: 0px;
+    background-color: #ffffff;
+    color: #333;
+    padding: 0;
+    width: 100%;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: 20px;
+}
+
+.swich-icon {
+    background-color: #fff;
+    width: 25px;
+}
+
+/* =====起訖選擇===== */
+/* =====日期選擇===== */
+.box-design2 {
+    border-radius: 5px;
+    border: rgb(214, 214, 214)solid 1px;
+    background-color: #fff;
+    width: 45%;
+    height: 52px;
+    position: relative;
+    padding-left: 36px;
+    margin: 4px 8px 8px 8px;
+}
+
+/* =====日期選擇===== */
+/* =====票種選擇===== */
+
+.form-ticket {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.box-design-ticket {
+    border-radius: 5px;
+    border: rgb(214, 214, 214)solid 1px;
+    background-color: #fff;
+    height: 52px;
+    position: relative;
+    padding: 2px 4px;
+    margin: 4px 8px;
+}
+
+.dropdown-ticket {
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #333;
+    padding: 0;
+    width: 60px;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: 20px;
+
+}
+
+/* =====票種選擇===== */
+/* =====驗證碼===== */
+
+.end {
+    display: flex;
+    justify-content: end;
+    margin: 4px 0 28px 0;
+}
+
+.box-design-text {
+    border-radius: 5px;
+    border: rgb(214, 214, 214)solid 1px;
+    background-color: #fff;
+    height: 52px;
+    position: relative;
+    padding: 2px 4px;
+    margin-right: 4px;
+}
+
+.button-small {
+    background-color: #fff;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m16px {
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+
+.button {
+    background-color: #db5009;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    width: 260px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+.button:hover {
+    background-color: #ec6623;
+}
+
+
+.button:active {
+    background-color: #cc7100;
+}
+
+/* =====驗證碼===== */
+/* =====search box ends===== */
+/* =====wapper===== */
+
+.icon24px-l {
+    color: #db5009;
+    font-size: 24px;
+    position: absolute;
+    top: 22px;
+    left: 12px;
+}
+
+.icon24px-r {
+    color: #db5009;
+    font-size: 24px;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    transition: background-color 0.s ease, transform 0.1s ease;
+}
+
+.icon24px-r:hover {
+    position: absolute;
+    right: 16px;
+}
+
+.wapper-box {
+    border-radius: 5px;
+    border: rgb(214, 214, 214)solid 1px;
+    background-color: #fff;
+    width: 30%;
+    height: 72px;
+    position: relative;
+    padding: 8px;
+    padding-left: 36px;
+    margin: 4px 8px;
+}
+
+.wapper-box:hover {
+    background-color: #db4f0915;
+    border: #db4f0981 solid 1px;
+}
+
+.click {
+    color: #666;
+    font-weight: 600;
+}
+
+.check {
+    font-size: 14px;
+    color: #999;
+}
+
+/* =====wapper===== */
+/* =====注意事項===== */
+.notice-title {
+    color: #666;
+    font-size: 13px;
+    border-left: #db5009 solid 4px;
+    font-weight: 600;
+    padding-left: 4px;
+    margin-left: 8%;
+    margin-bottom: 10px;
+}
+
+.notice {
+    color: #666;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding: 0 10%;
+    margin: auto;
+    text-align: justify
+}
+
+.notice-ticket {
+    color: #888;
+    padding: 2px 0 0 16px;
+    text-align: justify
+}
+
+/* =====注意事項===== */
+/* =====footer===== */
+.footer {
+    max-width: 1100px;
+    margin: 20px 24%;
+    border-top: #d8d8d8 solid 1px;
+    padding: 32px 16px;
+}
+
+
+footer p a,
+footer p {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+/* =====footer===== */
+
+
+
+
+/* ================================ 手機版樣式 ========================================== */
+@media (max-width: 850px) {
+
+    /* =====header starts===== */
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100%;
+        background-color: #ffffff;
+        padding-top: 60px;
+        transition: right 0.3s ease;
+        z-index: 2;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 顯示主選單 */
+    .menu-toggle:checked~.menu {
+        right: 0;
+    }
+
+    .menu>li>a {
+        padding: 15px;
+        color: #999;
+        font-size: 14px;
+    }
+
+    /* 顯示子選單 */
+
+    .dropdown {
+        display: block;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+    }
+
+    .dropdown li a {
+        color: #333;
+        display: block;
+        padding: 4px 16px;
+    }
+
+    .menu li>.dropdown {
+        max-height: none;
+        opacity: 1;
+        visibility: visible;
+        padding-left: 4px;
+        padding-bottom: 16px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 24px;
+        color: #666;
+        cursor: pointer;
+        display: block;
+    }
+
+    .d-block {
+        display: block;
+    }
+
+    /* =====header ends===== */
+    /* =====section starts===== */
+
+    h2 {
+        display: none;
+    }
+
+    .container {
+        padding-right: 5%;
+        padding-left: 5%;
+        margin: auto;
+    }
+
+    .flex-wrap {
+        flex-wrap: wrap;
+    }
+
+    .flex-row {
+        flex-wrap: wrap;
+    }
+
+    /* =====section ends===== */
+
+    .search-box {
+        margin-bottom: 54px;
+    }
+
+    .swich-icon {
+        border-radius: 50%;
+        border: #999 solid 1px;
+        position: absolute;
+        top: 16%;
+        right: -24px;
+        z-index: 1;
+        background-color: #fff;
+        width: 50px;
+        padding: 4px;
+    }
+
+    .box-design-first {
+        width: 100%;
+        padding-left: 36px;
+        margin: 4px 0px;
+    }
+
+    /* =====票種選擇===== */
+
+    .form-ticket {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box-design-ticket {
+        width: 28%;
+    }
+
+    .dropdown-ticket {
+        width: 60px;
+    }
+
+    /* =====票種選擇===== */
+    .wapper-box {
+        width: 100%;
+        padding-left: 36px;
+        margin: 0 0 16px 0;
+    }
+}
