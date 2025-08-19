@@ -367,11 +367,11 @@ option:checked {
     border-radius: 5px;
     border: rgb(214, 214, 214)solid 1px;
     background-color: #fff;
-    width: 45%;
+    width: 48%;
     height: 52px;
     position: relative;
     padding-left: 36px;
-    margin: 4px 8px 8px 8px;
+    margin: 4px 8px 8px 0px;
 }
 
 /* =====日期選擇===== */
