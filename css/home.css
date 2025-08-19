@@ -367,11 +367,17 @@ option:checked {
     border-radius: 5px;
     border: rgb(214, 214, 214)solid 1px;
     background-color: #fff;
-    width: 48%;
+    width: 45%;
     height: 52px;
     position: relative;
     padding-left: 36px;
     margin: 4px 8px 8px 0px;
+}
+.dis-none{
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
 }
 
 /* =====日期選擇===== */

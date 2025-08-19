@@ -254,7 +254,7 @@
                         </div>
                     </div>
                     <!-- 3 回程-->
-                    <div class="flex-row" id="backto" style="display: none;">
+                    <div class="flex-row" id="backto">
                         <div class="box-design2 flex-row">
                             <i class="fa-regular fa-calendar icon24px"></i>
                             <div class="flex-column">
@@ -521,8 +521,8 @@
     <!-- footer -->
 
     <!-- <script>
-        const pickup = document.querySelector('pickup');
-        const backto = document.querySelector('backto');
+        const pickup = document.getElementById('pickup');
+        const backto = document.getElementById('backto');
 
         pickup.addEventListener('change', (event) => {
             const selectedValue = event.target.value;
